@@ -1,0 +1,119 @@
+<!doctype html>
+<html lang="cs">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Novinky podle verzí – AI Yours</title>
+<meta name="description" content="Přehled, co přinesla která verze aplikace AI Yours: od první veřejné verze 1.0.0 po aktuální 1.6.1.">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='14' fill='%231f6f5c'/%3E%3Ctext x='32' y='43' font-family='Segoe UI,Arial,sans-serif' font-size='28' font-weight='700' text-anchor='middle' fill='white'%3EAI%3C/text%3E%3C/svg%3E">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<header class="top">
+  <div class="wrap">
+    <a class="brand" href="./">AI <span>Yours</span></a>
+    <nav aria-label="Hlavní nabídka">
+      <a href="./#funkce">Co umí</a>
+      <a href="./#ukazky">Ukázky</a>
+      <a href="./#omezeni">Omezení</a>
+      <a href="./#stazeni">Stažení</a>
+      <a href="verze.html" aria-current="page">Novinky podle verzí</a>
+    </nav>
+  </div>
+</header>
+
+<main class="wrap">
+  <div class="hero" style="padding-block: 48px 24px">
+    <p class="label">Historie verzí</p>
+    <h1>Co přinesla která verze</h1>
+    <p class="lead">Od nejnovější po nejstarší. Veřejně ke stažení jsou verze označené „vydáno“, ostatní vznikaly postupně jako průběžná sestavení a samostatně se nevydávaly. Jejich změny jsou ale součástí verze 1.6.1.</p>
+    <div class="cta"><a class="btn" href="https://github.com/rejcom/AIYours/releases/latest">Stáhnout verzi 1.6.1</a></div>
+  </div>
+
+  <article class="ver" id="v1-6-1">
+    <header><h2>1.6.1</h2><span class="tag">vydáno</span><span class="date">1. 11. 2026</span></header>
+    <ul>
+      <li><strong>Zápis z porady:</strong> termín úkolu se zapisuje do sloupce Termín. Dřív ho model občas napsal do textu úkolu a v tabulce stálo „neuvedeno“. Opravila to úprava pokynu pro model i čtení výsledku.</li>
+      <li><strong>Termín příští porady</strong> už se nezobrazuje jako úkol, ale mezi projednanými body.</li>
+    </ul>
+  </article>
+
+  <article class="ver" id="v1-6-0">
+    <header><h2>1.6.0</h2><span class="tag int">průběžná</span><span class="date">30. 10. 2026</span></header>
+    <ul>
+      <li><strong>Přesnější přepis řeči:</strong> po zastavení diktování se celá nahrávka přepíše větším modelem Whisper (large-v3-turbo). Rychlý menší model dál slouží jen na průběžný náhled. Přepis trvá zhruba 0,6násobek délky záznamu, desetiminutová nahrávka tedy asi šest minut (měřeno na notebooku se Snapdragon X Elite).</li>
+      <li><strong>Slovník pro diktování:</strong> jména a odborné výrazy oddělené čárkou. Aplikace si je pamatuje a předává modelům jako nápovědu. Správný pravopis to zlepšit může, ale nezaručí.</li>
+      <li><strong>Nahrávka jako MP3:</strong> během diktování se nahrává a po zastavení se uloží do složky <code>Dokumenty\AIYours nahrávky</code>. Ukládání lze vypnout.</li>
+      <li><strong>Přepsat soubor:</strong> nové tlačítko přepíše hotovou nahrávku (mp3, m4a, wav, wma), třeba záznam porady.</li>
+    </ul>
+  </article>
+
+  <article class="ver" id="v1-5-x">
+    <header><h2>1.5.0 až 1.5.2</h2><span class="tag int">průběžné</span><span class="date">30. 10. 2026</span></header>
+    <ul>
+      <li><strong>1.5.0, Asistent psaní:</strong> okno „Zápis z poznámek“ se změnilo na obecné okno. Vlevo vstupní text, vpravo okno s pokynem a šablony (přepis do čistopisu, zjednodušení, shrnutí, zápis z jednání, úkoly, formální dopis, e-mail). Výsledek lze uložit do Wordu jako běžný text nebo, u šablony Zápis z jednání, jako strukturovaný zápis s tabulkou úkolů.</li>
+      <li><strong>1.5.1, oprava:</strong> v jednosouborovém .exe se nenačítaly nativní knihovny rozpoznání řeči a diktování hlásilo chybu „Native Library not found“.</li>
+      <li><strong>1.5.2, přesnější přepis:</strong> po zastavení diktování se průběžný přepis nahradí přepisem celé nahrávky najednou, pokud jste mezitím text sami neupravili.</li>
+    </ul>
+    <figure class="verimg"><img src="img/02-asistent-zjednoduseni.png" alt="Asistent psaní: zjednodušení úředního textu pro rodiče" width="1283" height="801" loading="lazy"><figcaption>Asistent psaní se šablonami a oknem pro pokyn. Vymyšlená data.</figcaption></figure>
+  </article>
+
+  <article class="ver" id="v1-4-0">
+    <header><h2>1.4.0</h2><span class="tag int">průběžná</span><span class="date">30. 10. 2026</span></header>
+    <ul>
+      <li><strong>Diktování:</strong> tlačítko Diktovat, rozpoznání řeči (Whisper) běží lokálně a zvuk se nikam neodesílá. Věty se objevují průběžně po pauze v řeči.</li>
+      <li>Model řeči se při prvním použití stáhne po potvrzení. V režimu bez internetu se nestahuje.</li>
+      <li>Srozumitelná hlášení při příliš krátké nahrávce, tichu nebo chybějícím mikrofonu. Nahrávání se po 10 minutách samo zastaví.</li>
+    </ul>
+  </article>
+
+  <article class="ver" id="v1-3-0">
+    <header><h2>1.3.0</h2><span class="tag int">průběžná</span><span class="date">30. 10. 2026</span></header>
+    <ul>
+      <li><strong>Zápis z poznámek do Wordu:</strong> z hrubých poznámek vznikne zápis s nadpisy, přítomnými, projednanými body, rozhodnutími a tabulkou úkolů. Před uložením ho lze upravit. Co v poznámkách chybí, model označí „neuvedeno“.</li>
+      <li>Oprava pro model Gemma 26B: její vnitřní značka se už nedostává do výstupu.</li>
+    </ul>
+    <figure class="verimg"><img src="img/01-asistent-zapis-z-porady.png" alt="Zápis z porady vytvořený z hrubých poznámek, s tabulkou úkolů" width="1283" height="801" loading="lazy"><figcaption>Zápis z hrubých poznámek (dnes v Asistentu psaní). Vymyšlená data.</figcaption></figure>
+  </article>
+
+  <article class="ver" id="v1-2-0">
+    <header><h2>1.2.0</h2><span class="tag int">průběžná</span><span class="date">30. 10. 2026</span></header>
+    <ul>
+      <li><strong>Pojistka při anonymizaci:</strong> rodná čísla, telefony, PSČ s obcí, e-maily, čísla účtů, IBAN a zápisy typu „nar. 12. 3. 1985“ se zakryjí vždy, i když je model přehlédne. Raději zakryje víc, než aby něco minula.</li>
+      <li><strong>Režim bez internetu:</strong> zapíná se v nabídce a pamatuje se po restartu. Blokuje veškerý síťový kód včetně stahování modelů. V oknech je odznak, zda model běží lokálně.</li>
+      <li>Odstraněny ladicí výpisy.</li>
+    </ul>
+  </article>
+
+  <article class="ver" id="v1-1-x">
+    <header><h2>1.1.0 až 1.1.2</h2><span class="tag int">průběžné</span><span class="date">30. 10. 2026</span></header>
+    <ul>
+      <li><strong>Nový model Gemma 4 E4B</strong> v nabídce modelů (včetně vlastního formátu pokynů).</li>
+      <li><strong>Povýšení knihovny pro běh modelů</strong> (LLamaSharp 0.30.0) a s ním spolehlivé načítání nativních knihoven v jednosouborovém .exe na ARM64 i x64.</li>
+      <li><strong>Anonymizace dokumentu, ruční doladění:</strong> kliknutím zakryjete nebo odkryjete řádek, tažením myši libovolnou oblast (podpis, razítko, fotku). Přepínač originál / anonymizovaný, zrušení zakrytí na stránce.</li>
+      <li><strong>Uložení do nového dokumentu:</strong> stránka jako PNG nebo celý dokument jako PDF. PDF se skládá od nuly, každá stránka je jen obrázek bez textové vrstvy. Aplikace odmítne uložit přes originál.</li>
+      <li><strong>1.1.1 a 1.1.2, čitelné odpovědi v chatu:</strong> model už nevypisuje značky Markdownu a LaTeXu jako holý text. Běžné zápisy cen jako „5 $“ se při tom nepřepisují.</li>
+    </ul>
+    <figure class="verimg"><img src="img/03-anonymizace-dokumentu.png" alt="Anonymizace ukázkového dokumentu s černými pruhy přes osobní údaje" width="1283" height="881" loading="lazy"><figcaption>Anonymizace dokumentu s ručním doladěním. Vymyšlená data.</figcaption></figure>
+  </article>
+
+  <article class="ver" id="v1-0-0">
+    <header><h2>1.0.0</h2><span class="tag">vydáno</span><span class="date">19. 8. 2026</span></header>
+    <p>První veřejná verze.</p>
+    <ul>
+      <li>Rychlé akce nad označeným textem přes <code>Ctrl+Shift+A</code>: oprava gramatiky a pravopisu, překlad do angličtiny a češtiny, zkrácení, přepis profesionálněji, anonymizace, vlastní pokyn.</li>
+      <li>Analýza dokumentů: PDF nebo fotka či sken, OCR (i vícestránkové dokumenty), nad výsledkem stejné akce.</li>
+      <li>Model běží lokálně přes llama.cpp, internet je potřeba jen na stažení modelu.</li>
+      <li>Průvodce prvním spuštěním změří výkon počítače a doporučí velikost modelu.</li>
+    </ul>
+  </article>
+</main>
+
+<footer>
+  <div class="wrap">
+    <p>AI Yours je osobní projekt Karla Rejthara. Tato stránka nepoužívá cookies, sledování ani externí písma či skripty.</p>
+    <p><a href="https://github.com/rejcom/AIYours">GitHub</a> · <a href="https://github.com/rejcom/AIYours/releases">Všechny verze ke stažení</a> · <a href="./">Úvodní stránka</a></p>
+  </div>
+</footer>
+</body>
+</html>

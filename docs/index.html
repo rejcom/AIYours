@@ -1,0 +1,169 @@
+<!doctype html>
+<html lang="cs">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>AI Yours – lokální AI asistent pro Windows</title>
+<meta name="description" content="AI Yours je Windows aplikace s umělou inteligencí, která běží přímo na vašem počítači. Texty z ní neodcházejí, funguje i bez internetu. Oprava textu, diktování, zápis z porady do Wordu, anonymizace dokumentů.">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='14' fill='%231f6f5c'/%3E%3Ctext x='32' y='43' font-family='Segoe UI,Arial,sans-serif' font-size='28' font-weight='700' text-anchor='middle' fill='white'%3EAI%3C/text%3E%3C/svg%3E">
+<meta property="og:title" content="AI Yours – lokální AI asistent pro Windows">
+<meta property="og:description" content="Umělá inteligence, která běží na vašem počítači. Texty neodcházejí, funguje i bez internetu.">
+<meta property="og:image" content="https://rejcom.github.io/AIYours/img/01-asistent-zapis-z-porady.png">
+<meta property="og:type" content="website">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<header class="top">
+  <div class="wrap">
+    <a class="brand" href="./">AI <span>Yours</span></a>
+    <nav aria-label="Hlavní nabídka">
+      <a href="#funkce">Co umí</a>
+      <a href="#ukazky">Ukázky</a>
+      <a href="#omezeni">Omezení</a>
+      <a href="#stazeni">Stažení</a>
+      <a href="verze.html">Novinky podle verzí</a>
+    </nav>
+  </div>
+</header>
+
+<main class="wrap">
+  <div class="hero">
+    <p class="label">Umělá inteligence, která zůstává u vás</p>
+    <h1>Lokální AI asistent pro Windows</h1>
+    <p class="lead">Aplikace, ve které jazykový model běží přímo na vašem počítači. Texty z ní neodcházejí na žádný cizí server a všechno funguje i bez připojení k internetu.</p>
+    <div class="cta">
+      <a class="btn" href="https://github.com/rejcom/AIYours/releases/latest">Stáhnout poslední verzi</a>
+      <a class="btn ghost" href="verze.html">Co je nového</a>
+    </div>
+    <ul class="facts">
+      <li>bez účtu a bez předplatného</li>
+      <li>bez grafické karty</li>
+      <li>jeden soubor .exe, bez instalace</li>
+      <li>Windows x64 i ARM64</li>
+    </ul>
+    <figure class="heroshot">
+      <img src="img/01-asistent-zapis-z-porady.png" alt="Okno aplikace AI Yours: Asistent psaní, vlevo hrubé poznámky z porady, vpravo hotový zápis" width="1283" height="801">
+      <figcaption>Asistent psaní: z hrubých poznámek zápis z porady. Vymyšlená data.</figcaption>
+    </figure>
+  </div>
+
+  <section id="proc">
+    <p class="label">Proč to vzniklo</p>
+    <h2>Citlivé texty do cloudu nepatří</h2>
+    <p>Jména a rodná čísla žáků, zprávy z poradny, personální podklady. Právě u takových textů by pomoc umělé inteligence nejvíc šetřila čas, a právě ty se nesmí posílat do běžných internetových služeb. AI Yours je nástroj, kterému lze takový text svěřit, protože se nikam neodesílá.</p>
+    <p>Vznikl pro školy, ale hodí se kdekoli, kde se pracuje s osobními údaji: úřad, ordinace, kancelář.</p>
+  </section>
+
+  <section id="funkce">
+    <p class="label">Co umí</p>
+    <h2>Funkce</h2>
+    <div class="grid">
+      <div class="card">
+        <h3>Akce nad označeným textem</h3>
+        <p>Označíte text kdekoli ve Windows (e-mail, Word, web), stisknete <code>Ctrl+Shift+A</code> a vyberete akci:</p>
+        <ul>
+          <li>opravit pravopis a překlepy</li>
+          <li>přeložit mezi češtinou a angličtinou</li>
+          <li>zkrátit</li>
+          <li>přepsat formálněji</li>
+          <li>anonymizovat</li>
+          <li>vlastní pokyn</li>
+        </ul>
+      </div>
+      <div class="card">
+        <h3>Asistent psaní</h3>
+        <p>Vlevo váš text (napsaný, vložený nebo nadiktovaný), vpravo okno s pokynem. Můžete napsat vlastní pokyn nebo kliknout na šablonu: přepis do čistopisu, zjednodušení, shrnutí, zápis z jednání, úkoly, formální dopis, e-mail. Výsledek upravíte, zkopírujete nebo uložíte do Wordu.</p>
+      </div>
+      <div class="card">
+        <h3>Zápis z porady do Wordu</h3>
+        <p>Z hrubých poznámek vznikne dokument s nadpisy, odrážkami a tabulkou úkolů (kdo, co, do kdy). Soubor <code>.docx</code> se vytvoří přímo, Word nemusí být nainstalovaný.</p>
+      </div>
+      <div class="card">
+        <h3>Diktování a přepis nahrávek</h3>
+        <p>Rozpoznání řeči (Whisper) běží taky na vašem počítači. Během mluvení vidíte průběžný náhled, po zastavení celou nahrávku přepíše přesnější model. Lze přepsat i hotovou nahrávku (mp3, m4a, wav, wma). Do slovníku napíšete jména a výrazy, které se mají psát správně.</p>
+      </div>
+      <div class="card">
+        <h3>Anonymizace dokumentů</h3>
+        <p>Načtete sken nebo PDF, aplikace přečte text (OCR) a zakryje řádky s osobními údaji. Co přehlédne, dozakryjete kliknutím nebo tažením myši. Uloží se nový dokument, kde je každá stránka jen obrázek bez textové vrstvy, takže pod černým pruhem nic není.</p>
+      </div>
+      <div class="card">
+        <h3>Režim bez internetu</h3>
+        <p>Jedno kliknutí v nabídce u ikony v oznamovací oblasti. Aplikace pak nevolá žádnou síť a stahování je zablokované. Hodí se tam, kde se s citlivými daty nesmí riskovat.</p>
+      </div>
+    </div>
+  </section>
+
+  <section id="ukazky">
+    <p class="label">Ukázky</p>
+    <h2>Jak to vypadá</h2>
+    <p>Všechny ukázky jsou na vymyšlených datech. Výstupy vygeneroval skutečný model, nejde o předělané obrázky.</p>
+    <div class="shots">
+      <div class="shot flip">
+        <div class="txt">
+          <h3>Zjednodušení textu pro rodiče</h3>
+          <p>Úřední formulace přepsaná srozumitelně. Pokyn můžete upravit, třeba na „napiš z toho dopis řediteli“.</p>
+        </div>
+        <figure><img src="img/02-asistent-zjednoduseni.png" alt="Okno Asistent psaní: úřední text a jeho zjednodušená verze pro rodiče" width="1283" height="801" loading="lazy"></figure>
+      </div>
+      <div class="shot">
+        <figure><img src="img/03-anonymizace-dokumentu.png" alt="Anonymizace ukázkového dokumentu: černé pruhy přes jméno, adresu, rodné číslo, telefon a e-mail" width="1283" height="881" loading="lazy"></figure>
+        <div class="txt">
+          <h3>Anonymizace dokumentu</h3>
+          <p>Model navrhne řádky s osobními údaji, doladíte je myší. Rodná čísla, telefony, e-maily, PSČ, čísla účtů a IBAN se zakryjí vždy, i když je model přehlédne.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="omezeni">
+    <p class="label">Na rovinu</p>
+    <h2>Co je potřeba vědět předem</h2>
+    <div class="note">
+      <h3>Omezení</h3>
+      <ul>
+        <li><strong>Je to pomalejší než velké internetové služby.</strong> Na notebooku bez grafické karty trvá odpověď na dvě věty řádově deset až dvacet sekund. Čísla jsou z měření na jednom notebooku, ne z nezávislého testu.</li>
+        <li><strong>Model se mýlí.</strong> Nejčastěji ve shodě rodu, v překladu, ve jménech a v datech. Výstup vždy přečtěte, než ho použijete.</li>
+        <li><strong>Přepis řeči není dokonalý.</strong> Jména a čísla si po diktování zkontrolujte.</li>
+        <li><strong>Anonymizace je pomocník, ne rozhodčí.</strong> Před sdílením dokumentu zkontrolujte všechny stránky.</li>
+        <li><strong>Licence modelů.</strong> Aplikace stahuje volně dostupné modely (Qwen3, Gemma 4). Před nasazením ve škole nebo firmě si ověřte jejich licenční podmínky.</li>
+        <li><strong>Nahrávky z diktování.</strong> Pokud je nechcete ukládat, zaškrtávátko „Uložit nahrávku (MP3)“ vypněte. Soubory na disku nejsou šifrované.</li>
+      </ul>
+    </div>
+  </section>
+
+  <section id="stazeni">
+    <p class="label">Vyzkoušet</p>
+    <h2>Stažení a spuštění</h2>
+    <p>Stáhněte si jeden soubor <code>.exe</code> podle procesoru vašeho počítače. Instalace není potřeba.</p>
+    <div class="tablewrap">
+      <table>
+        <thead><tr><th>Soubor</th><th>Pro koho</th></tr></thead>
+        <tbody>
+          <tr><td><code>AIYours-x64.exe</code></td><td>drtivá většina PC a notebooků (Intel, AMD). Běží i emulovaně na ARM, takže funguje skoro vždy.</td></tr>
+          <tr><td><code>AIYours-ARM64.exe</code></td><td>Windows na ARM (například Snapdragon X Elite)</td></tr>
+        </tbody>
+      </table>
+    </div>
+    <p style="margin-top:1rem">Typ procesoru zjistíte v <em>Nastavení → Systém → O systému → Typ systému</em>.</p>
+    <ol>
+      <li>Stáhněte soubor ze stránky <a href="https://github.com/rejcom/AIYours/releases/latest">Releases</a>. Soubor má asi 250 MB.</li>
+      <li>Spusťte ho. Aplikace naskočí do oznamovací oblasti vedle hodin.</li>
+      <li>Při prvním spuštění vás průvodce provede výběrem jazykového modelu. Model se stáhne jednou (jednotky GB), proto je v tu chvíli potřeba internet. Pak už aplikace funguje i offline.</li>
+      <li>Označte text kdekoli a stiskněte <code>Ctrl+Shift+A</code>.</li>
+    </ol>
+    <p>Soubor není digitálně podepsaný, takže Windows může při prvním spuštění zobrazit varování SmartScreen. Je to osobní projekt, zdrojový kód zatím není veřejný a v repozitáři jsou jen hotové sestavené verze.</p>
+    <div class="cta">
+      <a class="btn" href="https://github.com/rejcom/AIYours/releases/latest">Stáhnout poslední verzi</a>
+      <a class="btn ghost" href="https://github.com/rejcom/AIYours/issues">Napsat zpětnou vazbu</a>
+    </div>
+  </section>
+</main>
+
+<footer>
+  <div class="wrap">
+    <p>AI Yours je osobní projekt Karla Rejthara. Tato stránka nepoužívá cookies, sledování ani externí písma či skripty.</p>
+    <p><a href="https://github.com/rejcom/AIYours">GitHub</a> · <a href="https://github.com/rejcom/AIYours/releases">Všechny verze ke stažení</a> · <a href="verze.html">Novinky podle verzí</a></p>
+  </div>
+</footer>
+</body>
+</html>
